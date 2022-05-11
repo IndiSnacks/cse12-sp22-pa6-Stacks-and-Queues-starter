@@ -82,7 +82,7 @@ public class MazeSearchGUI extends JFrame implements ActionListener {
      * The constructor for MazeSearchGUI. It creates the main JPanel for the
      * user interface.
      * 
-     * @param maze      a 2D String array that represents the maze
+     * @param maze a 2D String array that represents the maze
      * @param searchAlg either "BFS" or "DFS"
      */
     public MazeSearchGUI(String[][] maze, String searchAlg) {

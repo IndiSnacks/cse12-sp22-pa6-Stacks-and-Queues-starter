@@ -28,6 +28,8 @@ public class PublicTester {
     }
 
     // ------------ Deque ---------------
+
+    
     /** Test the Deque constructor, initialize deque with capacity 10 */
     @Test
     public void testDequeConstructor() {

@@ -46,7 +46,7 @@ public interface QueueInterface<E> {
      * or null if there was no such element.
      * PRECONDITION: the QueueInterface's size is greater than zero.
      * POSTCONDITION: The QueueInterface is unchanged.
-     * @return  the element at the head, or null if the size was zero.
+     * @return the element at the head, or null if the size was zero.
      */
     public E peek();
 
