@@ -1,8 +1,7 @@
 /**
- * TODO: Add your file header
- * Name:
- * Email:
- * Sources used: Put "None" if you did not have any external help
+ * Name: Sahil Gathe
+ * Email: sgathe@ucsd.edu
+ * Sources used: Tutors, zybook, lecture notes
  * 
  * This file contains a MyQueue class, which is an implementation for the Queue
  * ADT based on MyDeque. Elements can be added/removed from the queue in a FIFO
@@ -23,7 +22,7 @@ public class MyQueue<E> implements QueueInterface<E> {
      * can hold.
      */
     public MyQueue(int initialCapacity) {
-        // TODO: Add your implementation here
+        this.theQueue = new MyDeque<>(initialCapacity);
     }
 
     /**
@@ -33,8 +32,12 @@ public class MyQueue<E> implements QueueInterface<E> {
      */
     @Override
     public boolean empty() {
-        // TODO: Add your implementation here
-        return false;
+        if(theQueue.size() == 0){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     /**
@@ -43,8 +46,8 @@ public class MyQueue<E> implements QueueInterface<E> {
      * @param element the element to add to the queue
      */
     @Override
-    public void enqueue(E element) {
-        // TODO: Add your implementation here
+    public void enqueue(E element){
+        theQueue.addFirst(element);
     }
 
     /**
@@ -56,8 +59,8 @@ public class MyQueue<E> implements QueueInterface<E> {
      */
     @Override
     public E dequeue() {
-        // TODO: Add your implementation here
-        return null;
+        E rtnValue = theQueue.removeLast();
+        return rtnValue;
     }
 
     /**
@@ -68,8 +71,8 @@ public class MyQueue<E> implements QueueInterface<E> {
      */
     @Override
     public E peek() {
-        // TODO: Add your implementation here
-        return null;
+        E rtnValue = theQueue.peekFirst();
+        return rtnValue;
     }
 
     /**

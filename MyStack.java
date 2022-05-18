@@ -1,8 +1,7 @@
 /**
- * TODO: Add your file header
- * Name:
- * Email:
- * Sources used: Put "None" if you did not have any external help
+ * Name: Sahil Gathe
+ * Email: sgathe@ucsd.edu
+ * Sources used: tutors, zybooks, lecture notes 
  * 
  * This file contains a MyStack class, which is an implementation for the Stack
  * ADT based on MyDeque. Elements can be added/removed from the queue in a LIFO
@@ -23,7 +22,7 @@ public class MyStack<E> implements StackInterface<E> {
      * can hold.
      */
     public MyStack(int initialCapacity) {
-        // TODO: Add your implementation here
+        this.theStack = new MyDeque<>(initialCapacity);
     }
 
     /**
@@ -33,8 +32,12 @@ public class MyStack<E> implements StackInterface<E> {
      */
     @Override
     public boolean empty() {
-        // TODO: Add your implementation here
-        return false;
+        if(theStack.size == 0){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     /**
@@ -44,7 +47,7 @@ public class MyStack<E> implements StackInterface<E> {
      */
     @Override
     public void push(E element) {
-        // TODO: Add your implementation here
+        theStack.addFirst(element);
     }
 
     /**
@@ -55,8 +58,7 @@ public class MyStack<E> implements StackInterface<E> {
      */
     @Override
     public E pop() {
-        // TODO: Add your implementation here
-        return null;
+        return theStack.removeFirst();
     }
 
     /**
@@ -67,8 +69,7 @@ public class MyStack<E> implements StackInterface<E> {
      */
     @Override
     public E peek() {
-        // TODO: Add your implementation here
-        return null;
+        return theStack.peekFirst();
     }
 
     /**
